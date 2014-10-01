@@ -32,7 +32,7 @@ public class JasperReportExporter {
 
     private static final String OUTPUT_TARGET = "/home/mvrueden/dev/jasper-sample/output";
 
-    private static final String DEFAULT_START_TIME = "2014-09-01 00:00:00";
+    private static final String DEFAULT_START_TIME = "2014-09-25 00:00:00";
 
     private static final String DEFAULT_END_TIME = "2014-11-01 00:00:00";
 
@@ -83,6 +83,7 @@ public class JasperReportExporter {
         compileSubreport("InterfaceAvailabilityReport_subreport1.jrxml");
         compileSubreport("ResponseTime_subreport1.jrxml");
         compileSubreport("ResponseTimeSummary_Availability_subreport.jrxml");
+        compileSubreport("ResponseTimeAvg_subreport.jrxml");
         compileSubreport("ResponseTimeSummary_subreport.jrxml");
         compileSubreport("ResponseTimeSummary_Response_Offenders_subreport.jrxml");
         compileSubreport("ResponseTimeSummary_Availability_Offenders_subreport.jrxml");
@@ -162,8 +163,8 @@ public class JasperReportExporter {
                 .param("endDate", DEFAULT_DATE_FORMAT.parse(DEFAULT_END_TIME))
                 .param("rrdDir", RRD_ROOT + "/snmp")
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
-//        createReport(new ReportDescriptor("Early-Morning-Report.jrxml")
-//                .param("ONMS_REPORT_DIR", REPORT_ROOT));
+        createReport(new ReportDescriptor("Early-Morning-Report.jrxml")
+                .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("EventAnalysis.jrxml")
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("InterfaceAvailabilityReport.jrxml")
@@ -185,8 +186,11 @@ public class JasperReportExporter {
                 .param("rrdDir", RRD_ROOT)
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("ResponseTimeSummary.jrxml")
-                .param("ONMS_REPORT_DIR", REPORT_ROOT)
-                .param("rrdDir", RRD_ROOT));
+                .param("startDate", DEFAULT_DATE_FORMAT.parse(DEFAULT_START_TIME))
+                .param("TIME_RANGE", DEFAULT_TIME_RANGE_NUMBER)
+                .param("SURVEILLANCE_CATEGORY", "Development")
+                .param("rrdDir", RRD_ROOT)
+                .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("sample-report.jrxml")
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("SerialInterfaceUtilizationSummary.jrxml")
