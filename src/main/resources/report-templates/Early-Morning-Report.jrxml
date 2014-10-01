@@ -3,6 +3,7 @@
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<template><![CDATA[$P{ONMS_REPORT_DIR} + "/assets/styles/defaultStyles.jrtx"]]></template>
 	<style name="Crosstab Data Text" hAlign="Center"/>
 	<subDataset name="outages_24h">
 		<queryString>
@@ -581,10 +582,10 @@ WHERE
 			<groupExpression><![CDATA[$F{media}]]></groupExpression>
 		</group>
 	</subDataset>
-  <parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
-    <parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
-    <defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
-  </parameter>
+	<parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
+		<defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[select now() as current_time;]]>
 	</queryString>
@@ -1720,11 +1721,11 @@ WHERE
 				<reportElement x="0" y="46" width="555" height="1"/>
 			</line>
 			<staticText>
-				<reportElement x="0" y="0" width="236" height="30"/>
+				<reportElement style="Title" x="0" y="0" width="391" height="30"/>
 				<textElement>
 					<font fontName="SansSerif" size="24" isBold="true" isItalic="false"/>
 				</textElement>
-				<text><![CDATA[Early morning report]]></text>
+				<text><![CDATA[Early morning Report]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="2" y="30" width="234" height="15"/>
@@ -1749,17 +1750,20 @@ WHERE
 		<band splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="13" splitType="Stretch">
+		<band height="24" splitType="Stretch">
 			<line>
 				<reportElement x="0" y="1" width="555" height="1"/>
 			</line>
-			<staticText>
-				<reportElement x="0" y="4" width="555" height="8"/>
-				<textElement textAlignment="Center">
-					<font fontName="SansSerif" size="6" isBold="false"/>
-				</textElement>
-				<text><![CDATA[OpenNMS Copyright 2002-2011 The OpenNMS Group, Inc. OpenNMS is a registered trademark of The OpenNMS Group, Inc.]]></text>
-			</staticText>
+			<textField>
+				<reportElement x="435" y="4" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="4" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
 		</band>
 	</pageFooter>
 	<summary>

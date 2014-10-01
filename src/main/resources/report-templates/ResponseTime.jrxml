@@ -65,10 +65,10 @@
 			<bottomPen lineWidth="0.5" lineColor="#000000"/>
 		</box>
 	</style>
-  <parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
-    <parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
-    <defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
-  </parameter>
+	<parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
+		<defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
+	</parameter>
 	<parameter name="COMPANY_LOGO" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA[$P{ONMS_REPORT_DIR} + "/assets/images/company-logo.png"]]></defaultValueExpression>
 	</parameter>
@@ -132,7 +132,7 @@ ORDER BY
 	<variable name="ICMP_Latency_AVG" class="java.lang.Double"/>
 	<variable name="ICMP_Latency_MIN" class="java.lang.Double"/>
 	<variable name="ICMP_Latency_MAX" class="java.lang.Double"/>
-	<group name="surveillance_category_group">
+	<group name="surveillance_category_group" isStartNewPage="true">
 		<groupExpression><![CDATA[$F{categoryname}]]></groupExpression>
 		<groupHeader>
 			<band height="24">
@@ -144,11 +144,7 @@ ORDER BY
 			</band>
 		</groupHeader>
 		<groupFooter>
-			<band height="11">
-				<break>
-					<reportElement x="0" y="6" width="100" height="1" isRemoveLineWhenBlank="true"/>
-				</break>
-			</band>
+			<band height="5"/>
 		</groupFooter>
 	</group>
 	<group name="nodelabel_group">
@@ -283,7 +279,7 @@ ORDER BY
 		</band>
 	</pageFooter>
 	<noData>
-		<band height="135">
+		<band height="121">
 			<staticText>
 				<reportElement x="0" y="80" width="554" height="38"/>
 				<textElement/>

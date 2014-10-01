@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="node-response-time" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
 	<property name="ireport.zoom" value="1.6528925619834718"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="607"/>
+	<property name="ireport.y" value="48"/>
 	<template><![CDATA[$P{ONMS_REPORT_DIR} + "/assets/styles/defaultStyles.jrtx"]]></template>
 	<style name="Report_Title" forecolor="#000000" fontSize="20"/>
 	<style name="Report_Subtitle" forecolor="#000000" vAlign="Middle" fontSize="10" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
@@ -65,10 +65,10 @@
 			<bottomPen lineWidth="0.5" lineColor="#000000"/>
 		</box>
 	</style>
-  <parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
-    <parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
-    <defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
-  </parameter>
+	<parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
+		<defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
+	</parameter>
 	<parameter name="COMPANY_LOGO" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA[$P{ONMS_REPORT_DIR} + "/assets/images/company-logo.png"]]></defaultValueExpression>
 	</parameter>
@@ -112,12 +112,6 @@
 	</parameter>
 	<parameter name="SUBREPORT_TIME_RANGE" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA[$P{TIME_RANGE} + " Days"]]></defaultValueExpression>
-	</parameter>
-	<parameter name="SUBREPORT_DS_SURVEILLANCE" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA[$F{categoryname}]]></defaultValueExpression>
-	</parameter>
-	<parameter name="SUBEREPORT_NODE_LABEL" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA[$F{nodelabel}]]></defaultValueExpression>
 	</parameter>
 	<queryString>
 		<![CDATA[SELECT
@@ -226,7 +220,7 @@ ORDER BY
 						<subreportParameterExpression><![CDATA[$P{ONMS_REPORT_DIR}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="DS_SURVEILLANCE_CATEGORY">
-						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DS_SURVEILLANCE}]]></subreportParameterExpression>
+						<subreportParameterExpression><![CDATA[$F{categoryname}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="TIME_RANGE">
 						<subreportParameterExpression><![CDATA[$P{SUBREPORT_TIME_RANGE}]]></subreportParameterExpression>
