@@ -9,10 +9,6 @@
 		<parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
 		<defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
 	</parameter>
-	<parameter name="ONMS_RRD_DIR" class="java.lang.String" isForPrompting="false">
-		<parameterDescription><![CDATA[The directory where all rrd data can be found]]></parameterDescription>
-		<defaultValueExpression><![CDATA["${install.dir}/share/rrd/snmp"]]></defaultValueExpression>
-	</parameter>
 	<parameter name="COMPANY_LOGO" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA[$P{ONMS_REPORT_DIR} + "/assets/images/company-logo.png"]]></defaultValueExpression>
 	</parameter>
@@ -33,7 +29,7 @@ new GregorianCalendar(new GregorianCalendar().get(Calendar.YEAR), new GregorianC
 )]]></defaultValueExpression>
 	</parameter>
 	<parameter name="rrdDir" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA[$P{ONMS_RRD_DIR}]]></defaultValueExpression>
+    <defaultValueExpression><![CDATA["${install.dir}/share/rrd/snmp"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA[$P{ONMS_REPORT_DIR} + "/subreports/"]]></defaultValueExpression>
