@@ -89,9 +89,9 @@ ORDER BY
 			<groupExpression><![CDATA[$F{maintcontractstatus}]]></groupExpression>
 		</group>
 	</subDataset>
-	<parameter name="ONMS_REPORT_DIR" class="java.lang.String">
+	<parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
-		<defaultValueExpression><![CDATA["/home/mvrueden/dev/jasper-sample/src/main/resources/report-templates"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="WARNING_THRESHOLD_DAYS" class="java.lang.Integer">
 		<parameterDescription><![CDATA[Warning threshold for contract expiration]]></parameterDescription>

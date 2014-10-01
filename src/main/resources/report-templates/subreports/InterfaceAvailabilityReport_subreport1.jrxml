@@ -14,10 +14,10 @@
 			<style mode="Opaque" backcolor="#FF9900"/>
 		</conditionalStyle>
 	</style>
-	<parameter name="ONMS_REPORT_DIR" class="java.lang.String">
-		<parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
-		<defaultValueExpression><![CDATA["/home/mvrueden/dev/jasper-sample/src/main/resources/report-templates"]]></defaultValueExpression>
-	</parameter>
+  <parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
+    <parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
+    <defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
+  </parameter>
 	<parameter name="NODE_ID" class="java.lang.Integer" isForPrompting="false">
 		<defaultValueExpression><![CDATA[3]]></defaultValueExpression>
 	</parameter>

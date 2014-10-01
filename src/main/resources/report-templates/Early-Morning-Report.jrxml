@@ -581,10 +581,10 @@ WHERE
 			<groupExpression><![CDATA[$F{media}]]></groupExpression>
 		</group>
 	</subDataset>
-	<parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
-		<defaultValueExpression><![CDATA["/home/mvrueden/dev/jasper-sample/src/main/resources/report-templates"]]></defaultValueExpression>
-	</parameter>
+  <parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
+    <parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
+    <defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
+  </parameter>
 	<queryString>
 		<![CDATA[select now() as current_time;]]>
 	</queryString>

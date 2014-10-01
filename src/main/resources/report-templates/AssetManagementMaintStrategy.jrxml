@@ -149,10 +149,10 @@ ORDER BY
 		<field name="contractstatus" class="java.lang.String"/>
 		<field name="tally" class="java.lang.Long"/>
 	</subDataset>
-	<parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
-		<defaultValueExpression><![CDATA["/home/mvrueden/dev/jasper-sample/src/main/resources/report-templates"]]></defaultValueExpression>
-	</parameter>
+  <parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
+    <parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
+    <defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
+  </parameter>
 	<parameter name="DATE_FORMAT" class="java.lang.String">
 		<parameterDescription><![CDATA[Your date format in maintenance contracts. Default is "YYYY-MM-DD"]]></parameterDescription>
 		<defaultValueExpression><![CDATA["YYYY-MM-DD"]]></defaultValueExpression>

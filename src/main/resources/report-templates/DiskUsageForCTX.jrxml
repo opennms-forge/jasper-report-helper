@@ -3,10 +3,14 @@
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<template><![CDATA["/home/mvrueden/dev/jasper-sample/src/main/resources/report-templates/assets/styles/defaultStyles.jrtx"]]></template>
+	<template><![CDATA[$P{ONMS_REPORT_DIR} + "/assets/styles/defaultStyles.jrtx"]]></template>
 	<style name="Header_background" mode="Opaque" backcolor="#DFDFDF"/>
+  <parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
+    <parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
+    <defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
+  </parameter>
 	<parameter name="COMPANY_LOGO" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["/home/mvrueden/dev/jasper-sample/src/main/resources/report-templates/assets/images/company-logo.png"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA[$P{ONMS_REPORT_DIR} + "/assets/images/company-logo.png"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="SURVEILLANCE_CATEGORY" class="java.lang.String">
 		<parameterDescription><![CDATA[Serveillance Category]]></parameterDescription>
@@ -28,7 +32,7 @@ new GregorianCalendar(new GregorianCalendar().get(Calendar.YEAR), new GregorianC
 		<defaultValueExpression><![CDATA["${install.dir}/share/rrd/snmp/"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["/home/mvrueden/dev/jasper-sample/src/main/resources/report-templates/subreports/"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA[$P{ONMS_REPORT_DIR} + "/subreports/"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="nameFilter" class="java.lang.String">
 		<parameterDescription><![CDATA[Expression used to select nodes by matching a name pattern]]></parameterDescription>
@@ -139,6 +143,9 @@ ORDER BY
 		<band height="16" splitType="Stretch">
 			<subreport>
 				<reportElement x="0" y="0" width="541" height="13"/>
+        <subreportParameter name="ONMS_REPORT_DIR">
+          <subreportParameterExpression><![CDATA[$P{ONMS_REPORT_DIR}]]></subreportParameterExpression>
+        </subreportParameter>
 				<subreportParameter name="rrdDir">
 					<subreportParameterExpression><![CDATA[$P{rrdDir}]]></subreportParameterExpression>
 				</subreportParameter>
