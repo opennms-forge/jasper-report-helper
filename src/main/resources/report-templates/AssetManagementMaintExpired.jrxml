@@ -190,7 +190,7 @@ ORDER BY
 		<groupHeader>
 			<band height="25" splitType="Prevent">
 				<textField>
-					<reportElement style="Sub-header" x="1" y="0" width="555" height="22"/>
+					<reportElement style="Sub-header" x="0" y="0" width="555" height="22"/>
 					<textElement/>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{maintcontract}]]></textFieldExpression>
 				</textField>
@@ -370,7 +370,7 @@ ORDER BY
 				<imageExpression class="java.lang.String"><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
 			</image>
 			<textField pattern="dd/MM/yyyy h.mm a">
-				<reportElement style="Body" x="0" y="29" width="392" height="20"/>
+				<reportElement style="Body" x="0" y="29" width="390" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
@@ -471,7 +471,7 @@ ORDER BY
 				<text><![CDATA[Vendor phone:]]></text>
 			</staticText>
 			<line>
-				<reportElement x="1" y="106" width="555" height="1" forecolor="#CCCCCC"/>
+				<reportElement x="0" y="106" width="555" height="1" forecolor="#CCCCCC"/>
 			</line>
 			<textField pattern="dd/MM/yyyy">
 				<reportElement style="Body" x="122" y="43" width="167" height="20"/>
@@ -543,7 +543,7 @@ ORDER BY
 				<imageExpression class="java.lang.String"><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="2" y="76" width="554" height="72"/>
+				<reportElement x="0" y="76" width="554" height="72"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA["There is no data for this report. \n\n" +
 "You can modify the value for WARNING_THRESHOLD_DAYS (current value is " + $P{WARNING_THRESHOLD_DAYS} + ").\n\n" +

@@ -312,7 +312,7 @@ GROUP BY
 		</band>
 	</pageFooter>
 	<noData>
-		<band height="182">
+		<band height="135">
 			<staticText>
 				<reportElement x="0" y="92" width="555" height="20"/>
 				<textElement/>
