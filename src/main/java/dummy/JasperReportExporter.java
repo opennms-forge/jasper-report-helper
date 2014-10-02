@@ -166,8 +166,8 @@ public class JasperReportExporter {
                 .param("endDate", DEFAULT_DATE_FORMAT.parse(DEFAULT_END_TIME))
                 .param("rrdDir", RRD_ROOT + "/snmp")
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
-//        createReport(new ReportDescriptor("Early-Morning-Report.jrxml")
-//                .param("ONMS_REPORT_DIR", REPORT_ROOT));
+        createReport(new ReportDescriptor("Early-Morning-Report.jrxml")
+                .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("EventAnalysis.jrxml")
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("InterfaceAvailabilityReport.jrxml")
