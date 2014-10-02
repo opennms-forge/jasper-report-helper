@@ -439,7 +439,7 @@ ORDER BY
 					</pie3DPlot>
 				</pie3DChart>
 				<subreport>
-					<reportElement x="1" y="301" width="515" height="212"/>
+					<reportElement x="0" y="301" width="515" height="212"/>
 					<subreportParameter name="DS_SURVEILLANCE_CAT">
 						<subreportParameterExpression><![CDATA[$P{DS_SURVEILLANCE_CATEGORY}]]></subreportParameterExpression>
 					</subreportParameter>
@@ -482,7 +482,7 @@ ORDER BY
 			</band>
 			<band height="68">
 				<subreport>
-					<reportElement x="1" y="0" width="514" height="61"/>
+					<reportElement x="0" y="0" width="514" height="61"/>
 					<subreportParameter name="ONMS_REPORT_DIR">
 						<subreportParameterExpression><![CDATA[$P{ONMS_REPORT_DIR}]]></subreportParameterExpression>
 					</subreportParameter>
@@ -514,7 +514,7 @@ ORDER BY
 				<imageExpression class="java.lang.String"><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement style="Title" x="1" y="0" width="350" height="29"/>
+				<reportElement style="Title" x="0" y="0" width="350" height="29"/>
 				<textElement verticalAlignment="Middle">
 					<font size="20" isBold="true"/>
 				</textElement>
@@ -527,7 +527,7 @@ ORDER BY
 				</graphicElement>
 			</line>
 			<textField pattern="dd/MM/yyyy h.mm a">
-				<reportElement style="Body" x="1" y="49" width="350" height="20"/>
+				<reportElement style="Body" x="0" y="49" width="350" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
@@ -551,7 +551,7 @@ ORDER BY
 				<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement x="1" y="0" width="514" height="1"/>
+				<reportElement x="0" y="0" width="514" height="1"/>
 			</line>
 		</band>
 	</pageFooter>
@@ -570,7 +570,7 @@ ORDER BY
 				<imageExpression class="java.lang.String"><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement style="Title" x="1" y="0" width="350" height="29"/>
+				<reportElement style="Title" x="0" y="0" width="350" height="29"/>
 				<textElement verticalAlignment="Middle">
 					<font size="20" isBold="true"/>
 				</textElement>
@@ -583,7 +583,7 @@ ORDER BY
 				</graphicElement>
 			</line>
 			<textField pattern="dd/MM/yyyy h.mm a">
-				<reportElement style="Body" x="1" y="49" width="350" height="20"/>
+				<reportElement style="Body" x="0" y="49" width="350" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>

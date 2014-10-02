@@ -113,7 +113,7 @@ ORDER BY
 	<pageHeader>
 		<band height="61" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="2" y="0" width="389" height="34"/>
+				<reportElement style="Title" x="0" y="0" width="389" height="34"/>
 				<textElement verticalAlignment="Middle">
 					<font size="20" isBold="true"/>
 				</textElement>
@@ -124,7 +124,7 @@ ORDER BY
 				<imageExpression class="java.lang.String"><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
 			</image>
 			<textField pattern="dd/MM/yyyy h.mm a">
-				<reportElement style="Body" x="2" y="34" width="391" height="20"/>
+				<reportElement style="Body" x="0" y="34" width="391" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
@@ -215,7 +215,7 @@ ORDER BY
 	<noData>
 		<band height="128">
 			<staticText>
-				<reportElement x="2" y="66" width="551" height="62"/>
+				<reportElement x="0" y="66" width="551" height="62"/>
 				<textElement>
 					<font fontName="SansSerif"/>
 				</textElement>
@@ -238,7 +238,7 @@ ORDER BY
 				<imageExpression class="java.lang.String"><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
 			</image>
 			<line>
-				<reportElement x="-2" y="54" width="555" height="1"/>
+				<reportElement x="0" y="54" width="555" height="1"/>
 				<graphicElement>
 					<pen lineWidth="1.5"/>
 				</graphicElement>

@@ -177,7 +177,7 @@ ORDER BY
 	<pageHeader>
 		<band height="73" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="-1" y="0" width="392" height="34"/>
+				<reportElement style="Title" x="0" y="0" width="392" height="34"/>
 				<textElement verticalAlignment="Middle">
 					<font size="20" isBold="true"/>
 				</textElement>
@@ -300,7 +300,7 @@ ORDER BY
 				<imageExpression class="java.lang.String"><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement style="Title" x="-1" y="0" width="392" height="34"/>
+				<reportElement style="Title" x="0" y="0" width="392" height="34"/>
 				<textElement verticalAlignment="Middle">
 					<font size="20" isBold="true"/>
 				</textElement>

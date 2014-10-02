@@ -29,7 +29,7 @@ new GregorianCalendar(new GregorianCalendar().get(Calendar.YEAR), new GregorianC
 )]]></defaultValueExpression>
 	</parameter>
 	<parameter name="rrdDir" class="java.lang.String" isForPrompting="false">
-    <defaultValueExpression><![CDATA["${install.dir}/share/rrd/snmp"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["${install.dir}/share/rrd/snmp"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA[$P{ONMS_REPORT_DIR} + "/subreports/"]]></defaultValueExpression>
@@ -145,12 +145,12 @@ ORDER BY
 				<textElement/>
 				<text><![CDATA[Report begin: ]]></text>
 			</staticText>
-			<textField evaluationTime="Page">
+			<textField>
 				<reportElement x="76" y="35" width="115" height="14"/>
 				<textElement/>
 				<textFieldExpression class="java.util.Date"><![CDATA[$P{startDate}]]></textFieldExpression>
 			</textField>
-			<textField evaluationTime="Page">
+			<textField>
 				<reportElement x="253" y="35" width="131" height="14"/>
 				<textElement/>
 				<textFieldExpression class="java.util.Date"><![CDATA[$P{endDate}]]></textFieldExpression>
@@ -294,7 +294,7 @@ ORDER BY
 				<textElement/>
 				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
-			<textField evaluationTime="Page">
+			<textField>
 				<reportElement x="253" y="35" width="131" height="14"/>
 				<textElement/>
 				<textFieldExpression class="java.util.Date"><![CDATA[$P{endDate}]]></textFieldExpression>
@@ -306,7 +306,7 @@ ORDER BY
 				</textElement>
 				<text><![CDATA[Total Bytes Transferred]]></text>
 			</staticText>
-			<textField evaluationTime="Page">
+			<textField>
 				<reportElement x="76" y="35" width="115" height="14"/>
 				<textElement/>
 				<textFieldExpression class="java.util.Date"><![CDATA[$P{startDate}]]></textFieldExpression>

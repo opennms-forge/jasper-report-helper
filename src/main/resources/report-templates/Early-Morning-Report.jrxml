@@ -719,7 +719,7 @@ WHERE
 						</graphicElement>
 					</rectangle>
 					<staticText>
-						<reportElement x="3" y="0" width="552" height="20" forecolor="#FFFFFF"/>
+						<reportElement x="0" y="0" width="552" height="20" forecolor="#FFFFFF"/>
 						<textElement verticalAlignment="Middle">
 							<font fontName="SansSerif" size="16" isBold="true" isItalic="false"/>
 						</textElement>
@@ -755,7 +755,7 @@ WHERE
 									<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 								</box>
 								<textField>
-									<reportElement style="Crosstab Data Text" x="2" y="0" width="61" height="20"/>
+									<reportElement style="Crosstab Data Text" x="0" y="0" width="61" height="20"/>
 									<textElement textAlignment="Left" verticalAlignment="Middle">
 										<font fontName="SansSerif" size="7" isBold="true"/>
 									</textElement>
@@ -792,7 +792,7 @@ WHERE
 									<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 								</box>
 								<textField>
-									<reportElement style="Crosstab Data Text" x="2" y="0" width="185" height="10"/>
+									<reportElement style="Crosstab Data Text" x="0" y="0" width="185" height="10"/>
 									<textElement textAlignment="Left" verticalAlignment="Middle">
 										<font fontName="SansSerif" size="7"/>
 									</textElement>
@@ -954,7 +954,7 @@ WHERE
 									<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 								</box>
 								<textField>
-									<reportElement style="Crosstab Data Text" x="2" y="0" width="61" height="10"/>
+									<reportElement style="Crosstab Data Text" x="0" y="0" width="61" height="10"/>
 									<textElement textAlignment="Left" verticalAlignment="Middle">
 										<font fontName="SansSerif" size="7" isBold="true"/>
 									</textElement>
@@ -991,7 +991,7 @@ WHERE
 									<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 								</box>
 								<textField>
-									<reportElement style="Crosstab Data Text" x="2" y="0" width="186" height="10"/>
+									<reportElement style="Crosstab Data Text" x="0" y="0" width="186" height="10"/>
 									<textElement textAlignment="Left" verticalAlignment="Middle">
 										<font fontName="SansSerif" size="7"/>
 									</textElement>
@@ -1136,7 +1136,7 @@ WHERE
 						</graphicElement>
 					</rectangle>
 					<staticText>
-						<reportElement x="3" y="0" width="552" height="20" forecolor="#FFFFFF"/>
+						<reportElement x="0" y="0" width="552" height="20" forecolor="#FFFFFF"/>
 						<textElement verticalAlignment="Middle">
 							<font fontName="SansSerif" size="16" isBold="true" isItalic="false"/>
 						</textElement>
@@ -1221,7 +1221,7 @@ WHERE
 						</graphicElement>
 					</rectangle>
 					<staticText>
-						<reportElement x="3" y="0" width="552" height="20" forecolor="#FFFFFF"/>
+						<reportElement x="0" y="0" width="552" height="20" forecolor="#FFFFFF"/>
 						<textElement verticalAlignment="Middle">
 							<font fontName="SansSerif" size="16" isBold="true" isItalic="false"/>
 						</textElement>
@@ -1286,7 +1286,7 @@ WHERE
 						</graphicElement>
 					</rectangle>
 					<staticText>
-						<reportElement x="3" y="0" width="552" height="20" forecolor="#FFFFFF"/>
+						<reportElement x="0" y="0" width="552" height="20" forecolor="#FFFFFF"/>
 						<textElement verticalAlignment="Middle">
 							<font fontName="SansSerif" size="16" isBold="true" isItalic="false"/>
 						</textElement>
@@ -1315,7 +1315,7 @@ WHERE
 									<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 								</box>
 								<textField>
-									<reportElement style="Crosstab Data Text" x="2" y="0" width="61" height="20"/>
+									<reportElement style="Crosstab Data Text" x="0" y="0" width="61" height="20"/>
 									<textElement textAlignment="Left" verticalAlignment="Middle">
 										<font fontName="SansSerif" size="7" isBold="true"/>
 									</textElement>
@@ -1352,7 +1352,7 @@ WHERE
 									<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 								</box>
 								<textField>
-									<reportElement style="Crosstab Data Text" x="2" y="0" width="186" height="10"/>
+									<reportElement style="Crosstab Data Text" x="0" y="0" width="186" height="10"/>
 									<textElement textAlignment="Left" verticalAlignment="Middle">
 										<font fontName="SansSerif" size="7"/>
 									</textElement>
@@ -1498,7 +1498,7 @@ WHERE
 			<band height="421">
 				<stackedBar3DChart>
 					<chart theme="default">
-						<reportElement x="-1" y="35" width="555" height="185"/>
+						<reportElement x="0" y="35" width="555" height="185"/>
 						<chartTitle>
 							<font fontName="SansSerif" size="10" isBold="true"/>
 							<titleExpression><![CDATA["All Events in last 24h"]]></titleExpression>
@@ -1602,7 +1602,7 @@ WHERE
 						</graphicElement>
 					</rectangle>
 					<staticText>
-						<reportElement x="3" y="0" width="552" height="20" forecolor="#FFFFFF"/>
+						<reportElement x="0" y="0" width="552" height="20" forecolor="#FFFFFF"/>
 						<textElement verticalAlignment="Middle">
 							<font fontName="SansSerif" size="16" isBold="true" isItalic="false"/>
 						</textElement>
@@ -1728,7 +1728,7 @@ WHERE
 				<text><![CDATA[Early morning Report]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="2" y="30" width="234" height="15"/>
+				<reportElement x="0" y="30" width="234" height="15"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="SansSerif"/>
 				</textElement>

@@ -210,7 +210,7 @@ ORDER BY
 					<textFieldExpression class="java.lang.String"><![CDATA[$V{ICMP_Latency_AVG} != null &&  $V{SUB_REPORT_COUNT} != null ? "" + ($V{ICMP_Latency_AVG}/new Double("1000.0")) / new Double("" + $V{SUB_REPORT_COUNT}) : "-"]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="2" y="1" width="348" height="20"/>
+					<reportElement x="0" y="1" width="348" height="20"/>
 					<textElement/>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{nodelabel}]]></textFieldExpression>
 				</textField>
@@ -249,7 +249,7 @@ ORDER BY
 	<pageHeader>
 		<band height="77" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="-1" y="0" width="391" height="34"/>
+				<reportElement style="Title" x="0" y="0" width="391" height="34"/>
 				<textElement verticalAlignment="Middle">
 					<font size="20" isBold="true"/>
 				</textElement>
@@ -266,7 +266,7 @@ ORDER BY
 				</graphicElement>
 			</line>
 			<textField>
-				<reportElement style="Sub-sub-header" x="-1" y="34" width="391" height="20"/>
+				<reportElement style="Sub-sub-header" x="0" y="34" width="391" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{TIME_RANGE_DESCRIPTION}]]></textFieldExpression>
 			</textField>
@@ -389,7 +389,7 @@ ORDER BY
 				<imageExpression class="java.lang.String"><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement style="Sub-sub-header" x="-1" y="34" width="391" height="20"/>
+				<reportElement style="Sub-sub-header" x="0" y="34" width="391" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{TIME_RANGE_DESCRIPTION}]]></textFieldExpression>
 			</textField>
@@ -399,7 +399,7 @@ ORDER BY
 				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement style="Title" x="-1" y="0" width="391" height="34"/>
+				<reportElement style="Title" x="0" y="0" width="391" height="34"/>
 				<textElement verticalAlignment="Middle">
 					<font size="20" isBold="true"/>
 				</textElement>

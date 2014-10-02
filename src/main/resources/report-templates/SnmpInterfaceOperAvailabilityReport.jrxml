@@ -314,9 +314,11 @@ GROUP BY
 	<noData>
 		<band height="135">
 			<staticText>
-				<reportElement x="0" y="92" width="555" height="20"/>
+				<reportElement x="0" y="92" width="555" height="43"/>
 				<textElement/>
-				<text><![CDATA[There is No Data for this Report]]></text>
+				<text><![CDATA[There is no data for this report.
+
+Please ensure that the SNMP Interface Poller is activated and working.]]></text>
 			</staticText>
 			<staticText>
 				<reportElement style="Title" x="0" y="0" width="384" height="34"/>

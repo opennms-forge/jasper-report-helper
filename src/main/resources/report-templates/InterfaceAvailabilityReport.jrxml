@@ -149,6 +149,9 @@ GROUP BY
 		<band height="84" splitType="Stretch">
 			<subreport>
 				<reportElement x="0" y="10" width="555" height="74"/>
+                <subreportParameter name="ONMS_REPORT_DIR">
+                    <subreportParameterExpression><![CDATA[$P{ONMS_REPORT_DIR}]]></subreportParameterExpression>
+                </subreportParameter>
 				<subreportParameter name="NODE_ID">
 					<subreportParameterExpression><![CDATA[$F{nodeid}]]></subreportParameterExpression>
 				</subreportParameter>

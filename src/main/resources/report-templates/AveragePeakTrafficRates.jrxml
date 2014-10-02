@@ -67,10 +67,10 @@
 	</style>
 	<style name="style1"/>
 	<style name="Interface_Header" hAlign="Center" vAlign="Middle" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
-  <parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
-    <parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
-    <defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
-  </parameter>
+	<parameter name="ONMS_REPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[The directory where all reports can be found]]></parameterDescription>
+		<defaultValueExpression><![CDATA["${install.dir}/etc/report-templates"]]></defaultValueExpression>
+	</parameter>
 	<parameter name="COMPANY_LOGO" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA[$P{ONMS_REPORT_DIR} + "/assets/images/company-logo.png"]]></defaultValueExpression>
 	</parameter>
@@ -163,7 +163,7 @@ ORDER BY
 					<textFieldExpression class="java.lang.String"><![CDATA["Node " + $F{nodelabel}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement style="Interface_Header" x="1" y="21" width="143" height="36"/>
+					<reportElement style="Interface_Header" x="0" y="21" width="143" height="36"/>
 					<textElement textAlignment="Left"/>
 					<text><![CDATA[IP-Interface]]></text>
 				</staticText>
@@ -202,7 +202,7 @@ ORDER BY
 	<pageHeader>
 		<band height="58" splitType="Stretch">
 			<staticText>
-				<reportElement style="Report_Title" x="1" y="0" width="460" height="34"/>
+				<reportElement style="Title" x="0" y="0" width="460" height="34"/>
 				<textElement verticalAlignment="Middle">
 					<font size="20" isBold="true"/>
 				</textElement>
@@ -320,13 +320,13 @@ ORDER BY
 				<imageExpression class="java.lang.String"><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
 			</image>
 			<line>
-				<reportElement x="1" y="54" width="626" height="1"/>
+				<reportElement x="0" y="54" width="626" height="1"/>
 				<graphicElement>
 					<pen lineWidth="1.5"/>
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement style="Report_Title" x="1" y="0" width="461" height="34"/>
+				<reportElement style="Title" x="0" y="0" width="461" height="34"/>
 				<textElement verticalAlignment="Middle">
 					<font size="20" isBold="true"/>
 				</textElement>
@@ -338,7 +338,7 @@ ORDER BY
 				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="69" width="625" height="59"/>
+				<reportElement x="0" y="69" width="625" height="59"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA["There is no data for this report.\n\n" +
 "You can change the parameter SURVEILLANCE_CATEGORY (current value is " +

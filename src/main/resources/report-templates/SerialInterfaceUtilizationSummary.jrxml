@@ -206,7 +206,7 @@ ORDER BY
 				<text><![CDATA[Interface Utilization Summary]]></text>
 			</staticText>
 			<textField>
-				<reportElement style="Report_Subtitle" x="0" y="34" width="392" height="20"/>
+				<reportElement style="Sub-sub-header" x="0" y="34" width="392" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{TIME_RANGE_DESCRIPTION}]]></textFieldExpression>
 			</textField>
@@ -242,14 +242,38 @@ ORDER BY
 		</band>
 	</pageFooter>
 	<noData>
-		<band height="50">
+		<band height="216">
 			<staticText>
-				<reportElement x="0" y="15" width="555" height="20"/>
+				<reportElement x="0" y="91" width="555" height="20"/>
 				<textElement>
 					<font fontName="SansSerif"/>
 				</textElement>
-				<text><![CDATA[There is no data for this report was found. Maybe you don't have any serial interfaces.]]></text>
+				<text><![CDATA[There is no data for this report. Maybe you don't have any snmp interfaces.]]></text>
 			</staticText>
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="392" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Interface Utilization Summary]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement style="Body" x="0" y="54" width="392" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="74" width="556" height="1"/>
+			</line>
+			<image>
+				<reportElement x="392" y="0" width="164" height="49"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="Sub-sub-header" x="0" y="34" width="392" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{TIME_RANGE_DESCRIPTION}]]></textFieldExpression>
+			</textField>
 		</band>
 	</noData>
 </jasperReport>

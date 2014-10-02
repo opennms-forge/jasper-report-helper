@@ -171,7 +171,7 @@ ORDER BY
 					</graphicElement>
 				</rectangle>
 				<textField>
-					<reportElement style="Header" x="2" y="0" width="553" height="21"/>
+					<reportElement style="Header" x="0" y="0" width="553" height="21"/>
 					<textElement/>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{manufacturer}]]></textFieldExpression>
 				</textField>
@@ -245,7 +245,7 @@ ORDER BY
 						<jr:columnFooter height="3" rowSpan="1"/>
 						<jr:detailCell style="expire_warning_TD" height="17" rowSpan="1">
 							<textField>
-								<reportElement x="2" y="0" width="160" height="17"/>
+								<reportElement x="0" y="0" width="160" height="17"/>
 								<textElement/>
 								<textFieldExpression class="java.lang.String"><![CDATA[$F{nodelabel}]]></textFieldExpression>
 							</textField>
