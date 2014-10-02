@@ -42,6 +42,8 @@ public class JasperReportExporter {
 
     private static final Integer DEFAULT_TIME_RANGE_NUMBER = 7;
 
+    private static final String DEFAULT_CATEGORY = "Development";
+
     private static final DateFormat DEFAULT_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
     private static class ReportDescriptor {
@@ -149,38 +151,39 @@ public class JasperReportExporter {
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("AvailabilitySummary.jrxml")
                 .param("ONMS_REPORT_DIR", REPORT_ROOT)
-                .param("TIME_RANGE", 7));
+                .param("START_TIME", DEFAULT_DATE_FORMAT.parse(DEFAULT_START_TIME))
+                .param("TIME_RANGE", DEFAULT_TIME_RANGE_NUMBER));
         createReport(new ReportDescriptor("AveragePeakTrafficRates.jrxml")
                 .param("startDate", DEFAULT_DATE_FORMAT.parse(DEFAULT_START_TIME))
                 .param("endDate", DEFAULT_DATE_FORMAT.parse(DEFAULT_END_TIME))
-                .param("SURVEILLANCE_CATEGORY", "Development")
+                .param("SURVEILLANCE_CATEGORY", DEFAULT_CATEGORY)
                 .param("rrdDir", RRD_ROOT + "/snmp")
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("DiskUsageForCTX.jrxml")
-                .param("SURVEILLANCE_CATEGORY", "Development")
+                .param("SURVEILLANCE_CATEGORY", DEFAULT_CATEGORY)
                 .param("nameFilter", "%")
                 .param("startDate", DEFAULT_DATE_FORMAT.parse(DEFAULT_START_TIME))
                 .param("endDate", DEFAULT_DATE_FORMAT.parse(DEFAULT_END_TIME))
                 .param("rrdDir", RRD_ROOT + "/snmp")
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
-        createReport(new ReportDescriptor("Early-Morning-Report.jrxml")
-                .param("ONMS_REPORT_DIR", REPORT_ROOT));
+//        createReport(new ReportDescriptor("Early-Morning-Report.jrxml")
+//                .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("EventAnalysis.jrxml")
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("InterfaceAvailabilityReport.jrxml")
                 .param("AVAILABILITY_WARNING", DEFAULT_AVAILABILITY_WARNING)
                 .param("AVAILABILITY_CRITICAL", DEFAULT_AVAILABILITY_CRITICAL)
                 .param("TIME_RANGE_NUMBER", DEFAULT_TIME_RANGE_NUMBER)
-                .param("START_TIME", DEFAULT_DATE_FORMAT.parse("2014-09-01 00:00:00"))
+                .param("START_TIME", DEFAULT_DATE_FORMAT.parse(DEFAULT_START_TIME))
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("NodeAvailabilityReport.jrxml")
-                .param("SURVEILLANCE_CATEGORY", "Development")
+                .param("SURVEILLANCE_CATEGORY", DEFAULT_CATEGORY)
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("ResponseTime.jrxml")
                 .param("ONMS_REPORT_DIR", REPORT_ROOT)
                 .param("rrdDir", RRD_ROOT));
         createReport(new ReportDescriptor("ResponseTimeCharts.jrxml")
-                .param("SURVEILLANCE_CATEGORY", "Development")
+                .param("SURVEILLANCE_CATEGORY", DEFAULT_CATEGORY)
                 .param("startDate", DEFAULT_DATE_FORMAT.parse(DEFAULT_START_TIME))
                 .param("endDate", DEFAULT_DATE_FORMAT.parse(DEFAULT_END_TIME))
                 .param("rrdDir", RRD_ROOT)
@@ -188,25 +191,25 @@ public class JasperReportExporter {
         createReport(new ReportDescriptor("ResponseTimeSummary.jrxml")
                 .param("startDate", DEFAULT_DATE_FORMAT.parse(DEFAULT_START_TIME))
                 .param("TIME_RANGE", DEFAULT_TIME_RANGE_NUMBER)
-                .param("SURVEILLANCE_CATEGORY", "Development")
+                .param("SURVEILLANCE_CATEGORY", DEFAULT_CATEGORY)
                 .param("rrdDir", RRD_ROOT)
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("sample-report.jrxml")
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
         createReport(new ReportDescriptor("SerialInterfaceUtilizationSummary.jrxml")
-                .param("AVAILABILITY_WARNING", DEFAULT_AVAILABILITY_WARNING)
-                .param("AVAILABILITY_CRITICAL", DEFAULT_AVAILABILITY_CRITICAL)
                 .param("ONMS_REPORT_DIR", REPORT_ROOT)
                 .param("rrdDir", RRD_ROOT + "/snmp")
                 .param("START_TIME", DEFAULT_DATE_FORMAT.parse(DEFAULT_START_TIME))
                 .param("TIME_RANGE_NUMBER", DEFAULT_TIME_RANGE_NUMBER));
         createReport(new ReportDescriptor("SnmpInterfaceOperAvailabilityReport.jrxml")
-                .param("ONMS_REPORT_DIR", REPORT_ROOT));
+                .param("ONMS_REPORT_DIR", REPORT_ROOT)
+                .param("START_TIME", DEFAULT_DATE_FORMAT.parse(DEFAULT_START_TIME))
+                .param("TIME_RANGE_NUMBER", DEFAULT_TIME_RANGE_NUMBER));
         createReport(new ReportDescriptor("TotalBytesTransferredByInterface.jrxml")
                 .param("SURVEILLANCE_CATEGORY", "%")
                 .param("startDate", DEFAULT_DATE_FORMAT.parse(DEFAULT_START_TIME))
                 .param("endDate", DEFAULT_DATE_FORMAT.parse(DEFAULT_END_TIME))
-                .param("ONMS_RRD_DIR", RRD_ROOT + "/snmp")
+                .param("rrdDir", RRD_ROOT + "/snmp")
                 .param("ONMS_REPORT_DIR", REPORT_ROOT));
     }
 
