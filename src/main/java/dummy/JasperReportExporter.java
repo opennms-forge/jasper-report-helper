@@ -28,7 +28,7 @@ public class JasperReportExporter {
 
     private static final String REPORT_ROOT = "/home/mvrueden/dev/jasper-sample/src/main/resources/report-templates";
 
-    private static final String RRD_ROOT = "/home/mvrueden/dev/opennms/target/opennms-1.14.0-SNAPSHOT/share/rrd";
+    private static final String RRD_ROOT = "/home/mvrueden/dev/opennms/target/opennms-15.0.0-SNAPSHOT/share/rrd";
 
     private static final String OUTPUT_TARGET = "/home/mvrueden/dev/jasper-sample/output";
 
