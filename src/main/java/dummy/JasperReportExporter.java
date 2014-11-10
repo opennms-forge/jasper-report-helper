@@ -32,9 +32,9 @@ public class JasperReportExporter {
 
     private static final String OUTPUT_TARGET = "/home/mvrueden/dev/jasper-report-helper/output";
 
-    private static final String DEFAULT_START_TIME = "2014-09-25 00:00:00";
+    private static final String DEFAULT_START_TIME = "2014-11-03 00:00:00";
 
-    private static final String DEFAULT_END_TIME = "2014-11-01 00:00:00";
+    private static final String DEFAULT_END_TIME = "2014-12-01 00:00:00";
 
     private static final Double DEFAULT_AVAILABILITY_WARNING = 98.0d;
 
